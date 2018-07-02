@@ -28,7 +28,7 @@ function createWebAPIRequest(
         'Content-Type': 'application/x-www-form-urlencoded',
         Referer: 'http://music.163.com',
         Host: 'music.163.com',
-        Cookie: cookie,
+        Cookie: `${cookie} osver=Version%2010.12.6%20(Build%2016G29); appver=1.5.9; os=osx; channel=netease;`,
         'User-Agent': randomUserAgent()
       }
     },
@@ -77,7 +77,7 @@ function createRequest(path, method, data, callback, errorcallback) {
         path: path,
         headers: {
           Referer: 'http://music.163.com',
-          Cookie: 'appver=1.5.2',
+          Cookie: 'osver=Version%2010.12.6%20(Build%2016G29); appver=1.5.9; os=osx; channel=netease;',
           'Content-Type': 'application/x-www-form-urlencoded',
           'User-Agent': randomUserAgent()
         }
@@ -105,3 +105,4 @@ module.exports = {
   createWebAPIRequest,
   createRequest
 }
+
